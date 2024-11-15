@@ -1,0 +1,3 @@
+/#/invite_token=:token /admin/#/invite_token=:token 200
+/#/reset_token=:token /admin/#/reset_token=:token 200
+/#/confirmation_token=:token /admin/#/confirmation_token=:token 200
