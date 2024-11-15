@@ -1,0 +1,32 @@
+# Netlify configuration file
+
+# Build settings (optioneel, afhankelijk van je setup)
+
+[build]
+  base = "softskills"     # Submap waar Netlify moet werken
+  publish = "softskills/_site"  # Map die Netlify moet publiceren
+  command = "jekyll build"      # Build-command om de site te genereren
+
+
+# Redirects voor Netlify Identity
+[[redirects]]
+  from = "/admin/#/invite"
+  to = "/admin/"
+  status = 200
+
+[[redirects]]
+  from = "/admin/#/reset"
+  to = "/admin/"
+  status = 200
+
+[[redirects]]
+  from = "/.netlify/identity/*"
+  to = "/admin/"
+  status = 200
+  force = true
+
+# (Optioneel) Overige redirects, bijvoorbeeld voor legacy-URL's
+[[redirects]]
+  from = "/old-page"
+  to = "/new-page"
+  status = 301
