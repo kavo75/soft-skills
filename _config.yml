@@ -1,7 +1,7 @@
 title: Soft Skill Series
 description: A complete series about enhancing your soft skills for a better personal and professional life
 baseurl: ""  # Laat dit leeg als je site geen subdirectory heeft
-url: "http://localhost:4000"  # Dit is de lokale URL, wijzig deze voor productie
+url: "https://kavo75.github.io"  # Dit is de lokale URL, wijzig deze voor productie
 
 theme: cvless
 
