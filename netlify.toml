@@ -1,20 +1,19 @@
 # Build settings
 [build]
-  command = "jekyll build"   # Jekyll build command
-  publish = "_site"          # Directory waar Jekyll de site genereert
+  command = "jekyll build"
+  publish = "_site"
 
-# Redirects voor Netlify Identity en admin toegang
+# Redirects
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
 
 [[redirects]]
-  from = "/.netlify/identity/*"
+  from = "/identity/*"
   to = "/admin/"
   status = 200
 
-# Custom 404 pagina redirect (optioneel)
 [[redirects]]
   from = "/*"
   to = "/404.html"
