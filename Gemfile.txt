@@ -1,4 +1,0 @@
-source "https://rubygems.org"
-
-gem "jekyll", "~> 4.3.0" # Gebruik de juiste versie van Jekyll
-gem "webrick", "~> 1.7"  # Nodig voor Jekyll om lokaal te werken
