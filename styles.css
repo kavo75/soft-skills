@@ -1,50 +1,66 @@
+/* Reset standaard marges en padding */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
-  z-index: 10;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1000;
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    background-color: #575757;
 }
 
 .page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
+    min-height: 100vh;  /* Zorgt ervoor dat de sectie ten minste de hoogte van het scherm heeft */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.page p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    margin: 10px;
 }
 
 button:hover {
-  background-color: #444;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-#page2, #page3, #page4 {
-  display: none;
+    background-color: #575757;
 }
