@@ -1,25 +1,22 @@
-#header-main-topmenu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.header-main-topmenu {
+    display: flex; /* Zet de items naast elkaar */
+    justify-content: center; /* Centreer de knoppen horizontaal */
+    align-items: center; /* Centreer de knoppen verticaal in de navbar */
     background-color: #333;
     padding: 10px;
-    z-index: 1000;
-    display: flex; /* Flexbox voor horizontale weergave */
-    justify-content: center; /* Centreert de knoppen */
-    align-items: center; /* Verticaal centreren */
 }
 
-#header-main-topmenu a {
+.menu-item {
+    margin: 0 15px; /* Ruimte tussen de knoppen */
+}
+
+.menu-item a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    margin: 0 15px;
+    padding: 10px;
     font-size: 1.2em;
-    display: inline-block; /* Zorgt ervoor dat ze inline blijven */
 }
 
-#header-main-topmenu a:hover {
+.menu-item a:hover {
     background-color: #575757;
 }
