@@ -1,20 +1,32 @@
-// Function to scroll to a specific page
-function scrollToPage(pageNumber) {
-  const page = document.getElementById(`page${pageNumber}`);
-  window.scrollTo({
-    top: page.offsetTop,
-    behavior: 'smooth'
-  });
-}
+// Wait for the DOM content to load before executing
+document.addEventListener("DOMContentLoaded", function () {
+  const nextButtons = document.querySelectorAll(".next-btn");
+  const prevButtons = document.querySelectorAll(".prev-btn");
 
-// Show the appropriate page based on navigation
-window.addEventListener('load', () => {
-  const hash = window.location.hash;
-  if (hash) {
-    const pageNumber = hash.replace('#page', '');
-    scrollToPage(pageNumber);
-  } else {
-    // If no hash is present, default to page 1
-    scrollToPage(1);
+  // Add event listeners to Next buttons
+  nextButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      const nextPageId = this.getAttribute("data-next"); // Get the next page's id
+      scrollToPage(nextPageId);
+    });
+  });
+
+  // Add event listeners to Previous buttons
+  prevButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      const prevPageId = this.getAttribute("data-prev"); // Get the previous page's id
+      scrollToPage(prevPageId);
+    });
+  });
+
+  // Function to scroll to the specific page
+  function scrollToPage(pageId) {
+    const page = document.getElementById(pageId);
+    if (page) {
+      window.scrollTo({
+        top: page.offsetTop,
+        behavior: 'smooth',
+      });
+    }
   }
 });

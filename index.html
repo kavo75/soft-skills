@@ -13,29 +13,33 @@
     <a href="#page3" class="nav-link">Page 3</a>
     <a href="#page4" class="nav-link">Page 4</a>
   </div>
+
   <div id="page1" class="page">
     <h1>Page 1</h1>
     <p>This is the first page.</p>
-    <button class="next-btn" onclick="scrollToPage(2)">Next</button>
+    <button class="next-btn" data-next="page2">Next</button>
   </div>
+
   <div id="page2" class="page">
     <h1>Page 2</h1>
     <p>This is the second page.</p>
-    <button class="prev-btn" onclick="scrollToPage(1)">Previous</button>
-    <button class="next-btn" onclick="scrollToPage(3)">Next</button>
+    <button class="prev-btn" data-prev="page1">Previous</button>
+    <button class="next-btn" data-next="page3">Next</button>
   </div>
+
   <div id="page3" class="page">
     <h1>Page 3</h1>
     <p>This is the third page.</p>
-    <button class="prev-btn" onclick="scrollToPage(2)">Previous</button>
-    <button class="next-btn" onclick="scrollToPage(4)">Next</button>
+    <button class="prev-btn" data-prev="page2">Previous</button>
+    <button class="next-btn" data-next="page4">Next</button>
   </div>
+
   <div id="page4" class="page">
     <h1>Page 4</h1>
     <p>This is the fourth page.</p>
-    <button class="prev-btn" onclick="scrollToPage(3)">Previous</button>
+    <button class="prev-btn" data-prev="page3">Previous</button>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
