@@ -9,7 +9,7 @@ body {
     background-color: #f4f4f4;
 }
 
-header-main-topmenu {
+#header-main-topmenu {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,14 +19,14 @@ header-main-topmenu {
     z-index: 1000;
 }
 
-header-main-topmenu a {
+#header-main-topmenu a {
     color: white;
     text-decoration: none;
     padding: 10px;
     margin: 0 15px;
 }
 
-header-main-topmenu a:hover {
+#header-main-topmenu a:hover {
     background-color: #575757;
 }
 
