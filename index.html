@@ -1,52 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soft Skills - Gliding Pages</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gliding Pages</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Sticky Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#screen1">Page 1</a></li>
-            <li><a href="#screen2">Page 2</a></li>
-            <li><a href="#screen3">Page 3</a></li>
-            <li><a href="#screen4">Page 4</a></li>
-        </ul>
-    </nav>
-
-    <!-- Page Screens -->
-    <div class="content">
-        <section id="screen1" class="screen">
-            <h1>Page 1</h1>
-            <p>Introduction to Soft Skills. Click to slide down!</p>
-            <button class="scroll-btn" onclick="scrollToScreen('screen2')">Next</button>
-        </section>
-
-        <section id="screen2" class="screen">
-            <h1>Page 2</h1>
-            <p>Details about communication skills. Click to slide down!</p>
-            <button class="scroll-btn" onclick="scrollToScreen('screen1')">Back to Page 1</button>
-            <button class="scroll-btn" onclick="scrollToScreen('screen3')">Next</button>
-        </section>
-
-        <section id="screen3" class="screen">
-            <h1>Page 3</h1>
-            <p>Understanding emotional intelligence. Click to slide down!</p>
-            <button class="scroll-btn" onclick="scrollToScreen('screen2')">Back to Page 2</button>
-            <button class="scroll-btn" onclick="scrollToScreen('screen4')">Next</button>
-        </section>
-
-        <section id="screen4" class="screen">
-            <h1>Page 4</h1>
-            <p>Advanced soft skills for professional success. Click to go back to the first page!</p>
-            <button class="scroll-btn" onclick="scrollToScreen('screen3')">Back to Page 3</button>
-            <button class="scroll-btn" onclick="scrollToScreen('screen1')">Back to Start</button>
-        </section>
-    </div>
-
-    <script src="script.js"></script>
+  <div class="navbar">
+    <a href="#page1" class="nav-link">Page 1</a>
+    <a href="#page2" class="nav-link">Page 2</a>
+    <a href="#page3" class="nav-link">Page 3</a>
+    <a href="#page4" class="nav-link">Page 4</a>
+  </div>
+  <div id="page1" class="page">
+    <h1>Page 1</h1>
+    <p>This is the first page.</p>
+    <button class="next-btn" onclick="scrollToPage(2)">Next</button>
+  </div>
+  <div id="page2" class="page">
+    <h1>Page 2</h1>
+    <p>This is the second page.</p>
+    <button class="prev-btn" onclick="scrollToPage(1)">Previous</button>
+    <button class="next-btn" onclick="scrollToPage(3)">Next</button>
+  </div>
+  <div id="page3" class="page">
+    <h1>Page 3</h1>
+    <p>This is the third page.</p>
+    <button class="prev-btn" onclick="scrollToPage(2)">Previous</button>
+    <button class="next-btn" onclick="scrollToPage(4)">Next</button>
+  </div>
+  <div id="page4" class="page">
+    <h1>Page 4</h1>
+    <p>This is the fourth page.</p>
+    <button class="prev-btn" onclick="scrollToPage(3)">Previous</button>
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
