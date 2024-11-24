@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gliding Page Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/header-main-topmenu.css">
+    
 </head>
 <body>
 
-    <!-- Menu bovenaan -->
-    <nav>
-        <a href="#page1" class="menu-link">Page 1</a>
-        <a href="#page2" class="menu-link">Page 2</a>
-        <a href="#page3" class="menu-link">Page 3</a>
-        <a href="#page4" class="menu-link">Page 4</a>
-    </nav>
+       <!-- This is where the menu will be injected -->
+    <div id="header-main-topmenu"></div>
+
 
     <!-- Secties die de inhoud bevatten -->
     <div id="page1" class="page">
@@ -45,6 +43,7 @@
         <button class="scroll-btn" data-next="page1">Back to Start</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="assets/js/scrolling.js"></script>
+    <script src="assets/js/fetchPartials.js"></script>
 </body>
 </html>
