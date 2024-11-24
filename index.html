@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gliding Website</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Skills - Gliding Pages</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <section id="section1">
-    <h1>Welkom op de Gliding Website</h1>
-    <button id="glideButton">&#8595; Scroll naar beneden</button>
-  </section>
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#screen1">Page 1</a></li>
+            <li><a href="#screen2">Page 2</a></li>
+            <li><a href="#screen3">Page 3</a></li>
+            <li><a href="#screen4">Page 4</a></li>
+        </ul>
+    </nav>
 
-  <section id="section2">
-    <h2>Dit is de volgende sectie!</h2>
-    <p>Voeg hier wat inhoud toe voor de tweede sectie.</p>
-  </section>
+    <!-- Page Screens -->
+    <div class="content">
+        <section id="screen1" class="screen">
+            <h1>Page 1</h1>
+            <p>Introduction to Soft Skills. Click to slide down!</p>
+            <button class="scroll-btn" onclick="scrollToScreen('screen2')">Next</button>
+        </section>
 
-  <section id="section3">
-    <h2>En hier is nog een sectie!</h2>
-    <p>Voeg hier nog meer inhoud toe voor de derde sectie.</p>
-  </section>
+        <section id="screen2" class="screen">
+            <h1>Page 2</h1>
+            <p>Details about communication skills. Click to slide down!</p>
+            <button class="scroll-btn" onclick="scrollToScreen('screen1')">Back to Page 1</button>
+            <button class="scroll-btn" onclick="scrollToScreen('screen3')">Next</button>
+        </section>
 
-  <!-- Script aan het einde van de body -->
-  <script src="script.js"></script>
+        <section id="screen3" class="screen">
+            <h1>Page 3</h1>
+            <p>Understanding emotional intelligence. Click to slide down!</p>
+            <button class="scroll-btn" onclick="scrollToScreen('screen2')">Back to Page 2</button>
+            <button class="scroll-btn" onclick="scrollToScreen('screen4')">Next</button>
+        </section>
+
+        <section id="screen4" class="screen">
+            <h1>Page 4</h1>
+            <p>Advanced soft skills for professional success. Click to go back to the first page!</p>
+            <button class="scroll-btn" onclick="scrollToScreen('screen3')">Back to Page 3</button>
+            <button class="scroll-btn" onclick="scrollToScreen('screen1')">Back to Start</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
